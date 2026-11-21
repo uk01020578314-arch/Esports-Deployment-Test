@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.venv-fixed/
+.venv-run/
+venv/
+.env
+.coverage
+coverage.xml
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+hypecut-data/
+*.mp4
+*.mkv
+*.mov
+*.webm
+!tests/fixtures/*.mp4
+*.hypecut.json
+*.edl
+.DS_Store
+.idea/
+.vscode/
+# Local virtual environments created for this machine
+.venv-fixed/
+.venv-run/
+# Local kill-feed test screenshots
+killfeed_check_*.jpg
+killfeed_test.jpg

@@ -1,0 +1,57 @@
+
+profile: moba
+
+signals:
+  grid_fps: 5.0
+  frame_width: 80
+  frame_height: 45
+  enabled:
+    - audio_rms
+    - audio_transient
+    - speech_band
+    - scene_change
+    - roi_activity
+    - lol_action
+
+  weights:
+    audio_rms: 0.3
+    audio_transient: 0.5
+    speech_band: 0.3
+    scene_change: 0.2
+    roi_activity: 0.5
+    lol_action: 4.0
+
+  params:
+    roi_activity:
+      box: [0.60, 0.00, 1.00, 0.24]
+      threshold: 5
+
+    lol_action:
+      smooth_frames: 5
+
+  smooth_seconds: 2.0
+
+segments:
+  min_duration: 7.0
+  max_duration: 20.0
+  pre_roll: 4.0
+  post_roll: 4.0
+  merge_gap: 4.0
+  percentile: 91.0
+  max_clips: 0
+  target_duration: 180.0
+  snap_to_shots: true
+  snap_window: 3.0
+
+refiners:
+  - diversity
+  - pacing
+  - similarity
+
+refiner_params:
+  pacing:
+    ideal: 13.0
+    tolerance: 6.0
+
+  diversity:
+    min_gap: 90.0
