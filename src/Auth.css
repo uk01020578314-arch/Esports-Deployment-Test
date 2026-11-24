@@ -1,0 +1,243 @@
+/* ACHI.GG 게이밍 인증 화면 */
+
+.gaming-auth-page {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  display: grid;
+  place-items: center;
+  padding: 50px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.18), transparent 30%),
+    #070b16;
+  box-sizing: border-box;
+}
+
+.gaming-auth-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gaming-orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+}
+
+.orb-one {
+  top: -180px;
+  left: -120px;
+  background: #2563eb;
+}
+
+.orb-two {
+  right: -160px;
+  bottom: -180px;
+  background: #7c3aed;
+}
+
+.gaming-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(96, 165, 250, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.25) 1px, transparent 1px);
+  background-size: 45px 45px;
+  transform: perspective(600px) rotateX(55deg) scale(1.5);
+  transform-origin: center bottom;
+}
+
+.gaming-auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  padding: 42px;
+  box-sizing: border-box;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 22px;
+  background: rgba(11, 17, 32, 0.88);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(37, 99, 235, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.gaming-auth-logo {
+  margin-bottom: 26px;
+  color: #f8fafc;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.gaming-auth-logo span {
+  color: #38bdf8;
+}
+
+.gaming-auth-subtitle {
+  margin: 0 0 8px;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.gaming-auth-card h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.gaming-auth-description {
+  margin: 12px 0 30px;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gaming-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gaming-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gaming-field label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.gaming-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 1px solid #26354d;
+  border-radius: 9px;
+  outline: none;
+  background: #0b1220;
+  color: #f8fafc;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.gaming-field input::placeholder {
+  color: #64748b;
+}
+
+.gaming-field input:focus {
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.1),
+    0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+.gaming-primary-button,
+.gaming-secondary-button,
+.gaming-home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.gaming-primary-button {
+  margin-top: 4px;
+  border: 1px solid #38bdf8;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+.gaming-primary-button:hover {
+  transform: translateY(-1px);
+  border-color: #7dd3fc;
+  box-shadow:
+    0 10px 30px rgba(37, 99, 235, 0.35),
+    0 0 20px rgba(56, 189, 248, 0.12);
+}
+
+.gaming-secondary-button {
+  margin-top: 12px;
+  border: 1px solid #334155;
+  background: #111a2b;
+  color: #cbd5e1;
+}
+
+.gaming-secondary-button:hover {
+  border-color: #38bdf8;
+  background: #13233a;
+  color: #f8fafc;
+}
+
+.gaming-auth-footer {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 22px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.gaming-auth-footer a {
+  color: #38bdf8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.gaming-auth-footer a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+.gaming-home-link {
+  height: auto;
+  margin-top: 16px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gaming-home-link:hover {
+  color: #cbd5e1;
+}
+
+@media (max-width: 600px) {
+  .gaming-auth-page {
+    padding: 30px 16px;
+  }
+
+  .gaming-auth-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .gaming-auth-card h1 {
+    font-size: 30px;
+  }
+}
