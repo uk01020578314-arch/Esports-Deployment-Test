@@ -1,0 +1,43 @@
+﻿# Frontend
+node_modules/
+dist/
+dist-ssr/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv-*/
+venv/
+*.egg-info/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.bak
+tempCodeRunnerFile.py
+
+# Secrets and local databases
+.env
+.env.*
+!.env.example
+*.db*
+*.sqlite
+*.sqlite3
+
+# Original videos (exclude)
+backend/videos/
+
+# HypeCut generated data
+hypecut-data/
+
+# Other
+*.local
+
+hypecut/valorant_test.jpg

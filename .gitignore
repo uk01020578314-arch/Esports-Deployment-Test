@@ -1,0 +1,36 @@
+# Dependencies and build output
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Python environments and caches
+**/.venv/
+**/.venv-*/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+
+# Local databases, backups, and secrets
+**/*.db
+**/*.db-*
+**/*.sqlite
+**/*.sqlite3
+**/*.bak
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local video uploads and generated clips
+**/backend/videos/
+**/backend/highlights/
+**/hypecut-data/
+**/*.mp4
+**/*.mkv
+**/*.mov
+**/*.webm
+
+# Editors and logs
+**/.vscode/
+**/.idea/
+**/*.log
