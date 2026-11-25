@@ -58,14 +58,23 @@ function Header({ user, onLogout }) {
             전적 검색
           </a>
 
-          <Link
+          <div
             className="nav-item ai-highlight-nav"
-            to="/ai-highlight"
+            role="button"
+            tabIndex={0}
+            aria-haspopup="true"
+            aria-expanded={activeMenu === 'highlight'}
             onMouseEnter={() => setActiveMenu('highlight')}
-            onClick={() => setActiveMenu(null)}
+            onClick={() => setActiveMenu('highlight')}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault()
+                setActiveMenu('highlight')
+              }
+            }}
           >
             AI 하이라이트
-          </Link>
+          </div>
         </nav>
 
         {user ? (
